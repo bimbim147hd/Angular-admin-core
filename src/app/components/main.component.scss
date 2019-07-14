@@ -1,0 +1,9 @@
+.main-component-content {
+  position: absolute;
+  top: 0;
+  left: 240px;
+  padding: 85px 15px 15px 15px;
+  @media (max-width: 768px) {
+    left: 0;
+  }
+}
