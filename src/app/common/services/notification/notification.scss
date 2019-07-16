@@ -1,0 +1,32 @@
+#admin__core-notify {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  z-index: 99;
+  .notify-container {
+    padding: 12px;
+    border-radius: 5px;
+    width: 0px;
+    height: auto;
+  }
+  .notify-container.notify-success {
+    background-color: #01FF70;
+  }
+  .notify-container.notify-warning {
+    background-color: #FF851B;
+  }
+  .fa.fa-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .notify-message {
+    width: calc(100% - 40px);
+    height: auto;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

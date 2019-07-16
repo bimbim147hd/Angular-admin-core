@@ -1,6 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 declare var $: any;
-import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
 import { main_menu_items } from './main.menu-items';
 
 @Component({
@@ -11,6 +10,7 @@ import { main_menu_items } from './main.menu-items';
 export class MainComponent implements AfterViewInit {
   public main_menu_items = main_menu_items;
   name: string;
+  dtOptions: DataTables.Settings = {};
 
   constructor() {}
 
@@ -83,6 +83,7 @@ export class MainComponent implements AfterViewInit {
   showMenu = '';
   showSubMenu = '';
 
+
   addExpandClass(element: any) {
     if (element === this.showMenu) {
       this.showMenu = '0';
@@ -101,7 +102,6 @@ export class MainComponent implements AfterViewInit {
     this.isActive = !this.isActive;
   }
   // End open close
-
   ngAfterViewInit() {
     $(function() {
       $('.preloader').fadeOut();

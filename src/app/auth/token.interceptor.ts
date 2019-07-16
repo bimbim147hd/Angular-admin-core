@@ -13,8 +13,6 @@ export class TokenInterceptor implements HttpInterceptor {
       if (request.url.indexOf('upload') > -1) {
         request = request.clone({
           setHeaders: {
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-            // enctype: "multipart/form-data'",
             Authorization: 'Bearer ' + Cookies.get(environment.auth_token)
           }
         });

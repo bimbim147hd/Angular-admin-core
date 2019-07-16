@@ -1,0 +1,47 @@
+#mask-loader-core {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  #admin__core-loader {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: #ddd;
+  }
+  #admin__core-loader:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 2.5px;
+    background-color: #B10DC9;
+    animation: loading 2s linear infinite;
+  }
+
+  @keyframes loading {
+    from {
+      left: -200px;
+      width: 30%;
+    }
+    50% {
+      width: 30%;
+    }
+    70% {
+      width: 70%;
+    }
+    80% {
+      left: 50%;
+    }
+    95% {
+      left: 120%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+}

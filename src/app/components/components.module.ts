@@ -14,7 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { NgbdpaginationBasicComponent } from '../template/pages/component/pagination/pagination.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [MainComponent, SpinnerComponent, NgbdpaginationBasicComponent],
@@ -25,7 +26,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserModule,
+    DataTablesModule
   ],
   entryComponents: [],
   providers: [

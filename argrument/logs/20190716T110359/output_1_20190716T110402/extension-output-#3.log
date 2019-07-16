@@ -1,0 +1,9 @@
+7/16/2019, 2:09:20 PM:
+----------------------
+(postcss) CssSyntaxError Unexpected } (/home/trung95/works/admin-basic-app/src/app/common/services/preloader/_preloader.scss:48:1)
+  46 |     }
+  47 |   }
+> 48 | }
+     | ^
+  49 | 
+

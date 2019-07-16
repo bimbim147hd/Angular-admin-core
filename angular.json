@@ -33,14 +33,16 @@
               "node_modules/chartist/dist/chartist.css",
               "node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
               "node_modules/dragula/dist/dragula.css",
-              "src/scss/partials/colors/_blue.scss"
+              "src/scss/partials/colors/_blue.scss",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/jquery-slimscroll/jquery.slimscroll.min.js",
               "node_modules/pace-js/pace.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/datatables.net/js/jquery.dataTables.js"
             ]
           },
           "configurations": {
