@@ -7,7 +7,6 @@ export class AuthGuardService implements CanActivate {
   constructor(public auth: AuthService, public router: Router) {}
   canActivate(): boolean {
     if (!this.auth.isAuthenticated()) {
-      console.log(_.assign({}, document.location));
       this.router.navigate(['/auth/login'], {
         queryParams: {
           redirect: encodeURIComponent(document.location.pathname),

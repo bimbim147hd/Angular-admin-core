@@ -11,6 +11,7 @@ import { setAppInjector } from './app-injector';
 import { AppCommonModule } from './common/common.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
+import { ApiModule } from './api/api.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,8 @@ import { ComponentsModule } from './components/components.module';
     BrowserModule,
     AppCommonModule,
     ComponentsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ApiModule
   ],
   providers: [
     {

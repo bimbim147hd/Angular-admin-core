@@ -1,19 +1,25 @@
-@import "partials/variable";
-@import "partials/app";
-@import "partials/pages";
-@import "partials/sidebar";
-@import "partials/icons/font-awesome/css/font-awesome.min.css";
-@import "partials/icons/simple-line-icons/css/simple-line-icons.css";
-@import "partials/icons/weather-icons/css/weather-icons.min.css";
-@import "partials/icons/linea-icons/linea.css";
-@import "partials/icons/themify-icons/themify-icons.css";
-@import "partials/icons/flag-icon-css/flag-icon.min.css";
-@import "partials/icons/material-design-iconic-font/css/materialdesignicons.min.css";
-@import "partials/widgets";
-@import "partials/grid";
-@import "partials/responsive";
-@import "partials/spinners.css";
-@import "partials/animate.css";
+@import 'partials/variable';
+@import 'partials/app';
+@import 'partials/pages';
+@import 'partials/sidebar';
+@import 'partials/icons/font-awesome/css/font-awesome.min.css';
+@import 'partials/icons/simple-line-icons/css/simple-line-icons.css';
+@import 'partials/icons/weather-icons/css/weather-icons.min.css';
+@import 'partials/icons/linea-icons/linea.css';
+@import 'partials/icons/themify-icons/themify-icons.css';
+@import 'partials/icons/flag-icon-css/flag-icon.min.css';
+@import 'partials/icons/material-design-iconic-font/css/materialdesignicons.min.css';
+@import 'partials/widgets';
+@import 'partials/grid';
+@import 'partials/responsive';
+@import 'partials/spinners.css';
+@import 'partials/animate.css';
 
-@import "../app/common/services/notification/notification.scss";
-@import "../app/common/services/preloader/preloader.scss";
+@import '../app/common/services/notification/notification.scss';
+@import '../app/common/services/preloader/preloader.scss';
+
+.errors {
+  margin-top: 5px;
+  color: #e74c3c;
+  font-size: 15px;
+}

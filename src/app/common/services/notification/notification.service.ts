@@ -5,9 +5,23 @@ import * as _ from 'lodash';
 
 @Injectable()
 export class NotificationService {
+  scrollTop() {
+    $('html, body').animate(
+      {
+        scrollTop: 0
+      },
+      500
+    );
+  }
   constructor() {}
 
-  show(type: string, content: string, time: number = 0) {
+  show(type: string, content: string, time: number = 0, scollTop?: Boolean) {
+    if (!_.isUndefined(scollTop) && scollTop === true) {
+      this.scrollTop();
+    }
+
+    this.remove();
+
     const notify = document.createElement('div');
     notify.id = 'admin__core-notify';
     // tslint:disable-next-line:max-line-length
@@ -50,5 +64,18 @@ export class NotificationService {
           );
         }
       });
+  }
+  remove() {
+    if ($('body').find('#admin__core-notify').length) {
+      $('#admin__core-notify').animate(
+        {
+          width: 0
+        },
+        500,
+        function() {
+          $(this).remove();
+        }
+      );
+    }
   }
 }

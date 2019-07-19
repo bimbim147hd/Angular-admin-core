@@ -1,8 +1,10 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 declare var $: any;
 import { main_menu_items } from './main.menu-items';
+import { environment } from '../../environments/environment';
 import { NotificationService } from '../common/services/notification/notification.service';
-import { PreloaderService } from '../common/services/preloader/preloader.service';
+import * as Cookies from 'js-cookie';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -14,9 +16,10 @@ export class MainComponent implements AfterViewInit {
   name: string;
   dtOptions: DataTables.Settings = {};
 
-  constructor(private _notify: NotificationService, private _loader: PreloaderService) {
-    this._notify.show('success', 'okok');
-  }
+  constructor(
+    private notification: NotificationService,
+    private route: Router
+  ) {}
 
   // this is for the open close
   isActive = true;
@@ -115,5 +118,11 @@ export class MainComponent implements AfterViewInit {
         }
       });
     });
+  }
+
+  logout() {
+    Cookies.remove(environment.auth_token);
+    this.notification.show('success', 'You have logged out', 3000);
+    this.route.navigate(['/', 'auth', 'login']);
   }
 }

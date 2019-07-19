@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   auth_token: 'AUTH_TOKEN',
-  apiUrl: 'http:localhost:3000'
+  apiUrl: 'http://api.reflaunt.local'
 };
 
 /*

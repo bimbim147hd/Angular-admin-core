@@ -6,7 +6,7 @@
   bottom: 0px;
   right: 0px;
   #admin__core-loader {
-    height: 4px;
+    height: 2px;
     width: 100%;
     position: absolute;
     overflow: hidden;
@@ -18,8 +18,8 @@
     content: "";
     left: -200px;
     width: 200px;
-    height: 2.5px;
-    background-color: #B10DC9;
+    height: 2px;
+    background-color: #e74c3c;
     animation: loading 2s linear infinite;
   }
 

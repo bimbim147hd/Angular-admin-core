@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '../../../store/store.module';
+import { LOGIN_REQUESTED } from './login.action';
 
 @Component({
   selector: 'app-login',
@@ -6,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  public user = {
+    email: '',
+    password: ''
+  };
+  public store;
+  constructor(store: Store) {
+    this.store = store.getInstance();
+  }
 
   ngOnInit() {}
+
+  onSubmit() {
+    this.store.dispatch({ type: LOGIN_REQUESTED, data: this.user });
+  }
 }

@@ -7,8 +7,8 @@ const appRoutes: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [{ path: '', redirectTo: '/', pathMatch: 'full' }]
-    // canActivate: [AuthGuardService]
+    children: [{ path: '', redirectTo: '/', pathMatch: 'full' }],
+    canActivate: [AuthGuardService]
   },
   {
     path: 'auth',
