@@ -5,6 +5,7 @@ import { AppInjector } from '../app-injector';
 import { PreloaderService } from '../common/services/preloader/preloader.service';
 import { NotificationService } from '../common/services/notification/notification.service';
 import auth from '../components/auth/auth.saga';
+import user from '../components/user/user.saga';
 
 function* watchApiCallError() {
   yield takeEvery(API_CALL_ERROR, function*(action) {
@@ -34,5 +35,5 @@ function* watchApiCallError() {
 }
 
 export default function* sagas() {
-  yield all(_.map([watchApiCallError, ...auth], item => fork(item)));
+  yield all(_.map([watchApiCallError, ...auth, ...user], item => fork(item)));
 }

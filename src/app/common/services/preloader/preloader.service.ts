@@ -14,7 +14,6 @@ export class PreloaderService {
   }
   hide() {
     if ($('#mask-loader-core').length > 0) {
-      console.log('okok');
       $('#mask-loader-core').remove();
     }
   }

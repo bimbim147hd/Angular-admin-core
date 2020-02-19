@@ -7,7 +7,13 @@ const appRoutes: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [{ path: '', redirectTo: '/', pathMatch: 'full' }],
+    children: [
+      { path: '', redirectTo: '/user', pathMatch: 'full' },
+      {
+        path: 'user',
+        loadChildren: './components/user/user.module#UserModule'
+      }
+    ],
     canActivate: [AuthGuardService]
   },
   {

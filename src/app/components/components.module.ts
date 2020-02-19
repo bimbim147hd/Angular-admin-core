@@ -16,9 +16,10 @@ import { NgbdpaginationBasicComponent } from '../template/pages/component/pagina
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { DataTablesModule } from 'angular-datatables';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
-  declarations: [MainComponent, SpinnerComponent, NgbdpaginationBasicComponent],
+  declarations: [MainComponent, SpinnerComponent, NgbdpaginationBasicComponent, UserComponent],
   imports: [
     CommonModule,
     RouterModule,

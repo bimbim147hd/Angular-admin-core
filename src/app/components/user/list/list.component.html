@@ -1,0 +1,32 @@
+<div class="user-wrapper" *ngIf="store.getState().User.list.fetched">
+  <div id="admin__core--breadcrumb">
+    <div class="bcca-breadcrumb">
+      <div class="bcca-breadcrumb-item">Users <i class="far fa-user"></i></div>
+      <div class="bcca-breadcrumb-item"><a [routerLink]="['/']">Home</a></div>
+    </div>
+  </div>
+
+  <table
+    datatable
+    [dtOptions]="dtOptions"
+    class="row-border hover table table-striped"
+  >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of store.getState().User.list.items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.email }}</td>
+        <td>
+          <a class="btn btn-primary btn-table">Edit</a>
+          <a class="btn btn-danger btn-table">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
